@@ -1,0 +1,19 @@
+{
+  "name": "dashboard-extension-parameter-item",
+  "version": "1.0.0",
+  "description": "The **Parameter** custom item allows you to render dashboard parameter dialog content inside the dashboard layout and edit parameter values.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevExpress/dashboard-extension-parameter-item.git"
+  },
+  "author": "Developer Express Inc.",
+  "license": "MIT",
+  "homepage": "https://github.com/DevExpress/dashboard-extension-parameter-item#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "pump": "*"
+  }
+}
