@@ -28,10 +28,16 @@ gulp.task("watch_sources", function () {
 
 gulp.task('Ωdebug-uglify', function (cb) {
     pump([
-          gulp.src('src/*.js'),
+          gulp.src([
+			"./src/meta.js",
+			"./src/icon.js",
+			"./src/viewer.js",
+			"./src/extension.js"
+          ]),
+          concat("Ωdebug-parameter-item.js"),
           uglify(),
           gulp.dest('dist')
-    ],
+      ],
       cb
     );
 });
