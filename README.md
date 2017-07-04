@@ -1,28 +1,36 @@
-A custom **Parameter** item renders dashboard parameter dialog content inside the dashboard layout and edit parameter values.
-
-This dashboard item supports the following capabilities:
-
-- Edit and submit parameter values
+A custom **Parameter** item renders dashboard parameter dialog content inside the dashboard layout and allows you to edit and submit parameter values. 
 
 ## Installation
 
-To add a custom Parameter item extension to the Web Dashboard, follow the steps below.
+To add a custom Parameter item to the Web Dashboard, follow the steps below.
 
-1. Download the required version of scripts [here](https://github.com/DevExpress/dashboard-extension-parameter-item/releases) and add the *dist* folder in your project.
+1. Download the required version of scripts [here](https://github.com/DevExpress/dashboard-extension-parameter-item/releases).
 
-2. Attach the download script to the project.
+2. Add the *dist* folder in your project.
+
+3. Attach the download script to the project inside the `<body>` section before the end tag onto the page containing Web Dashboard.
 ```xml
-<script src="/your-path/dashboard-extension-parameter-item/dist/parameter-item.min.js"></script>
+<body>
+    <!-- ... -->
+    <script src="/dist/parameter-item.min.js"></script>
+</body>
 ```
 
-3. Handle the Web Dashboard's [BeforeRender](https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWebScriptsASPxClientDashboard_BeforeRendertopic) event to perform client-side customization of the Web Dashboard control before the control and its elements have been rendered.
-```xml
-<dx:ASPxDashboard ID="ASPxDashboard1" runat="server" DashboardStorageFolder="~/App_Data">
+4. Handle the Web Dashboard's [BeforeRender](https://documentation.devexpress.com/#Dashboard/DevExpressDashboardWebScriptsASPxClientDashboard_BeforeRendertopic) event to perform client-side customization of the Web Dashboard control before the control and its elements have been rendered.
+<!-- For ASP.NET Web Forms -->
+<dx:ASPxDashboard ID="ASPxDashboard1" runat="server" DashboardStorageFolder="~/App_Data/Dashboards">
   <ClientSideEvents BeforeRender="onBeforeRender" />
 </dx:ASPxDashboard>
 ```
+```C#
+@* For ASP.NET MVC *@
+@Html.DevExpress().Dashboard(settings => {
+    settings.Name = "Dashboard";
+    settings.ClientSideEvents.BeforeRender = "onBeforeRender";
+}).GetHtml()
+```
 
-4. Register the custom item extension to add the Parameter to the Web Dashboard.
+5. Register the custom item extension to add the Parameter item to the Web Dashboard.
 
 ```javascript
 function onBeforeRender(sender) {
