@@ -35,7 +35,7 @@ To add a custom Parameter item to the Web Dashboard, follow the steps below.
 ```javascript
 function onBeforeRender(sender) {
   var dashboardControl = sender.GetDashboardControl();
-  dashboardControl.registerExtension(CustomItemParametersExtension(dashboardControl));
+  dashboardControl.registerExtension(new parameterItemExtension(dashboardControl));
 }
 ```
 
