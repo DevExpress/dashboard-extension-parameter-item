@@ -1,4 +1,4 @@
-A custom **Parameter** item renders dashboard parameter dialog content inside the dashboard layout and allows you to edit and submit parameter values. 
+A custom **Parameter** item renders [dashboard parameter dialog](https://documentation.devexpress.com/Dashboard/117571/Preparing-the-Designer-and-Viewer-Applications/Web-Dashboard/Manage-Dashboard-Parameters) content inside the dashboard layout and allows you to edit and submit parameter values.
 
 ## Installation
 
@@ -43,9 +43,9 @@ function onBeforeRender(sender) {
 ## Settings
 The **Parameter** dashboard item supports the following settings that you can configure in the Web Dashboard UI:
 
-* **Show Headers** - Specifies whether the parameter table headers are shown.
-* **Show Parameter Name** - Specifies whether the first column of the the parameter table with parameter names is shown.
-* **Automatic Updates** - Specifies whether 'Submit' button to defer update and 'Reset' button to reset parameter values are shown.
+* **Show Headers** - Specifies whether to show headers in the parameters table.
+* **Show Parameter Name** - Specifies whether to show the first column with parameter names.
+* **Automatic Updates** - Specifies whether a parameter item is updated automatically. When enabled, this option hides the 'Submit' and 'Reset' buttons.
 
 ## Development 
 
