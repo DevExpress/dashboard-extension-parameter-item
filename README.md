@@ -42,6 +42,7 @@ function onBeforeRender(sender) {
 
 ## Settings
 The **Parameter** dashboard item supports the following settings that you can configure in the Web Dashboard UI:
+![wdd-extension-parameter](https://user-images.githubusercontent.com/17986517/27904791-8fc4f18c-6246-11e7-882b-12c2b5541be9.png)
 
 * **Show Headers** - Specifies whether to show headers in the parameters table.
 * **Show Parameter Name** - Specifies whether to show the first column with parameter names.
