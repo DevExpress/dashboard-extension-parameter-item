@@ -57,7 +57,7 @@ var parameterItemViewer = (function(_super) {
         this.dialogButtonSubscribe = undefined;
         this._subscribeProperties();
         this.parametersExtension.showDialogButton(false);
-        this.parametersExtension.subscribe(function() {
+        this.parametersExtension.subscribeToContentChanges(function () {
             _this._generateParametersContent();
         });
         this.dialogButtonSubscribe = this.parametersExtension.showDialogButton.subscribe(function() {
@@ -104,7 +104,7 @@ var parameterItemViewer = (function(_super) {
     };
     parameterItemViewer.prototype._generateParametersContent = function () {
         var _this = this;
-        this.parametersContent = this.parametersExtension.generateContent(this.$gridContainer);
+        this.parametersContent = this.parametersExtension.renderContent(this.$gridContainer);
         this.parametersContent.grid.option('onDisposing', function () {
             _this.dialogButtonSubscribe.dispose();
             _this.parametersExtension.showDialogButton(true);
