@@ -1,3 +1,10 @@
+
+⛔ DEPRECATED. This project was moved to a new repository. Visit [dashboard-extensions](https://github.com/DevExpress/dashboard-extensions) to find an updated version. 
+
+The current repository does not support the [modular approach](https://docs.devexpress.com/Dashboard/119108/) for HTML JS Dashboard and will not be updated in the future.
+
+------
+
 A custom **Parameter** item renders [dashboard parameter dialog](https://documentation.devexpress.com/Dashboard/117571/Preparing-the-Designer-and-Viewer-Applications/Web-Dashboard/Manage-Dashboard-Parameters) content inside the dashboard layout and allows you to edit and submit parameter values.
 
 ## Installation
